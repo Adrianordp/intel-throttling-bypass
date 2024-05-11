@@ -65,6 +65,11 @@ Clone this repository to a folder you will not delete (preferably your `/home/$(
 ```sh
 git clone https://github.com/Adrianordp/intel-throttling-bypass.git /home/$(whoami)/intel-throttling-bypass
 ```
+Navigate to this project directory and set the `startup-script.sh` permissions:
+```sh
+cd /home/$(whoami)/intel-throttling-bypass
+chmod 775 startup-script.sh
+```
 Then configure the startup script to run automatically after boot:
 ```sh
 (sudo crontab -l ; echo "@reboot /home/$(whoami)/intel-throttling-bypass/startup-script.sh")| sudo crontab -
